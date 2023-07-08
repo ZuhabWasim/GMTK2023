@@ -32,12 +32,17 @@ public class Dialogue
     [Tooltip("Where the dialogue is on the screen (1920x1080)")]
     public Vector3 position;
 
+    [Tooltip("Write down the sentences you'd want to appear")]
     public List<Sentence> sentences;
+
+    [Tooltip("How long you want to hang on this dialogue before another can play.")]
+    public float hangTime = 0f;
 }
 
 [System.Serializable]
 public class Sentence
 {
+    [Tooltip("If not a person, you can enter any generic name.")]
     public string name;
 
     [TextArea(3, 18)]
