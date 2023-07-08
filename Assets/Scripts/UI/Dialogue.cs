@@ -14,24 +14,19 @@ public enum DialogueType // your custom enumeration
     Interjecting,
 };
 
-public enum Emotion
-{
-    Neutral,
-    Angry,
-    Happy,
-    Disgust
-}
-
 [System.Serializable]
 public class Dialogue
 {
-    [Tooltip("")]
+    [Tooltip("Whether the dialogue should be the first, last, normal")]
     public DialogueType type;
 
-    public Emotion emotion;
+    [Tooltip("What emotion this dialogue should be associated with.")]
+    public Types.Emotion emotion;
 
+    [Tooltip("How long to wait before going to the next dialogue (0 means wait indefinitely).")]
     public float waitTime = 0;
 
+    [Tooltip("Where the dialogue is on the screen (1920x1080)")]
     public Vector3 position;
 
     public List<Sentence> sentences;
