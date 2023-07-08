@@ -17,8 +17,8 @@ public static class SaveSystem
         stream.Close();
    }
 
-   public static LoveInterestData LoadLoveInterest(string name) {
-        string path = Application.persistentDataPath + "/partners_" + name + ".bin";
+   public static LoveInterestData LoadLoveInterest(LoveInterest partner) {
+        string path = Application.persistentDataPath + "/partners_" + partner.characterName + ".bin";
         
         if (File.Exists(path)) {
             BinaryFormatter formatter = new BinaryFormatter();

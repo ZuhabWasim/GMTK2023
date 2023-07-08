@@ -16,8 +16,8 @@ public class LoveInterest : Person
         SaveSystem.SaveLoveInterest(this);
     }
 
-    public void LoadLoveInterest(string name) {
-        LoveInterestData data = SaveSystem.LoadLoveInterest(name);
+    public void LoadLoveInterest() {
+        LoveInterestData data = SaveSystem.LoadLoveInterest(this);
 
         this.characterName = data.characterName;
         this.affection = data.affection;
