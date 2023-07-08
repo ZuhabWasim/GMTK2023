@@ -10,8 +10,6 @@ Credits to Darren Tran
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    private bool triggered = false;
-
     public DialogueTrigger nextDialogue = null;
 
     public delegate void OnDialogueFinish();
@@ -25,7 +23,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        triggered = true;
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue, this);
 
         if (dialogue.type == DialogueType.Ending)

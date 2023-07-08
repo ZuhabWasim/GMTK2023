@@ -23,6 +23,9 @@ public class Dialogue
     [Tooltip("What emotion this dialogue should be associated with.")]
     public Types.Emotion emotion;
 
+    [Tooltip("Who will feel this emotion.")]
+    public Person person;
+
     [Tooltip("How long to wait before going to the next dialogue (0 means wait indefinitely).")]
     public float waitTime = 0;
 

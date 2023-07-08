@@ -6,14 +6,15 @@ using UnityEngine;
 public class LoveInterestData
 {
     public string characterName;
-    public int affection;
+    public float affection;
     public int emotion; // has to be a primitive
 
-    public LoveInterestData(LoveInterest partner) {
+    public LoveInterestData(LoveInterest partner)
+    {
         // if classes other than LoveInterest inherit Person, then
         // move characterName and affection to another function
         characterName = partner.characterName;
         affection = partner.affection;
-        emotion = (int) partner.emotion;
+        emotion = (int)partner.emotion;
     }
 }

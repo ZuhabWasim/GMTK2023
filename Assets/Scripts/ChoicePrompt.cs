@@ -3,58 +3,107 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Events;
+
+[System.Serializable]
+public class Choice
+{
+    [SerializeField]
+    public string choiceText;
+
+    [SerializeField]
+    public float affectionScore;
+
+    [SerializeField]
+    public DialogueTrigger dialogue;
+
+    [SerializeField]
+    public bool isDefaultChoice = false;
+}
 
 public class ChoicePrompt : MonoBehaviour
 {
-    
-    private bool choicePresented;
+    public List<Choice> choices;
 
-    public string choice1Text;
-    public string choice2Text;
-    public string choice3Text;
+    public GameObject choiceTemplate;
 
-    public TMP_Text choice1;
-    public TMP_Text choice2;
-    public TMP_Text choice3;
+    public float verticalSpacing = 100f;
+    public float choiceTimer = 5f;
 
-    public Transform char1;
-    public Transform char2;
-
-    public Transform[] char1Anchors;
-    public Transform[] char2Anchors;
-
-    
     // Start is called before the first frame update
     void Start()
     {
-        choicePresented = false;
+        ShowChoices();
     }
 
-    public void SwitchChoice() {
-        if (choicePresented) {
-            HideChoice();
-        } else {
-            ShowChoice();
+    public void ShowChoices()
+    {
+        int i = 0;
+
+        foreach (Choice choice in choices)
+        {
+            Vector3 position = new Vector3(
+                transform.position.x,
+                transform.position.y - ((i) * verticalSpacing),
+                0
+            );
+            GameObject newChoice = Instantiate(
+                choiceTemplate,
+                position,
+                transform.rotation,
+                this.transform
+            );
+
+            newChoice.SetActive(true);
+            newChoice.name = "Choice" + (i + 1);
+
+            TextMeshProUGUI choiceTextBox = newChoice.GetComponentInChildren<TextMeshProUGUI>();
+
+            choiceTextBox.text = choice.choiceText;
+
+            Button button = newChoice.GetComponent<Button>();
+            button.onClick.RemoveAllListeners();
+
+            UnityEventTools.AddPersistentListener(button.onClick, choice.dialogue.TriggerDialogue);
+            UnityEventTools.AddIntPersistentListener(button.onClick, UpdateAffection, i);
+            UnityEventTools.AddPersistentListener(button.onClick, HideChoices);
+
+            i += 1;
         }
+
+        StartCoroutine(choicesTimer());
     }
 
-    void SetText() {
-        choice1.text = choice1Text;
-        choice2.text = choice1Text;
-        choice3.text = choice1Text;
+    IEnumerator choicesTimer()
+    {
+        while (choiceTimer > 0)
+        {
+            choiceTimer -= Time.deltaTime;
+            yield return null;
+        }
+        foreach (Choice choice in choices)
+        {
+            if (choice.isDefaultChoice)
+            {
+                choice.dialogue.TriggerDialogue();
+                Protaganist pro = FindObjectOfType<Protaganist>();
+                if (pro)
+                    pro.AddAffection(choice.affectionScore);
+                break;
+            }
+        }
+        HideChoices();
     }
 
-    void ShowChoice() {
-        gameObject.SetActive(true);
-        char1.position = char1Anchors[1].position;
-        char2.position = char2Anchors[1].position;
-        choicePresented = true;
+    public void UpdateAffection(int index)
+    {
+        Protaganist pro = FindObjectOfType<Protaganist>();
+        if (pro)
+            pro.AddAffection(choices[index].affectionScore);
     }
 
-    void HideChoice() {
-        gameObject.SetActive(false);
-        char1.position = char1Anchors[0].position;
-        char2.position = char2Anchors[0].position;
-        choicePresented = false;
+    public void HideChoices()
+    {
+        this.gameObject.SetActive(false);
     }
 }

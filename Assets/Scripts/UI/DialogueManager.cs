@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Types;
 
 /*
 Dialogue Implementation -
@@ -17,6 +18,9 @@ public class DialogueManager : MonoBehaviour
     public AudioSource playsound;
 
     private Queue<Sentence> sentences;
+
+    public delegate void OnPersonEmoting(Person person, Emotion emotion);
+    public event OnPersonEmoting PersonEmote;
 
     public delegate void OnGameOver();
     public event OnGameOver GameOver;
@@ -40,12 +44,15 @@ public class DialogueManager : MonoBehaviour
         // Destroy any previous interrupted dialogue.
         if (currentTrigger != null)
             DestroyTrigger();
-        Debug.Log(trigger);
         currentTrigger = trigger;
 
         // Update dialogue box.
         animator.SetBool("IsOpen", true);
         animator.gameObject.transform.parent.transform.position = dialogue.position;
+
+        // Invoke event.
+        if (dialogue.person)
+            PersonEmote?.Invoke(dialogue.person, dialogue.emotion);
 
         // Build the sentences to be displayed.
         sentences = new Queue<Sentence>();
