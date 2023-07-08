@@ -38,7 +38,15 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnDestroy()
     {
-        if (nextDialogue)
-            nextDialogue.TriggerDialogue();
+        try
+        {
+            if (nextDialogue)
+                nextDialogue.TriggerDialogue();
+        }
+        catch (System.NullReferenceException ex)
+        {
+            return;
+            //Debug.Log("Caught referencing next Dialogue on game exit.");
+        }
     }
 }

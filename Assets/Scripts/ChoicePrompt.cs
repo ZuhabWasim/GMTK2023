@@ -126,6 +126,7 @@ public class ChoicePrompt : MonoBehaviour
     public void HideChoices()
     {
         this.gameObject.SetActive(false);
+        timer.SetVisible(false);
     }
 
     void OnDestroy()
