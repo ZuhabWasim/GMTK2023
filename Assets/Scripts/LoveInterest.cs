@@ -8,6 +8,10 @@ public class LoveInterest : Person
     public int affection;
     public Animator LoveInterestAnimator;
 
+    public void UpdateAffection(int newAffection) {
+        this.affection = newAffection;
+    }
+
     public void SaveLoveInterest() {
         SaveSystem.SaveLoveInterest(this);
     }
