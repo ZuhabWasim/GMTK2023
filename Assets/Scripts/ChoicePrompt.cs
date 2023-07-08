@@ -29,12 +29,16 @@ public class ChoicePrompt : MonoBehaviour
 
     public DialogueTrigger trigger;
 
+    public Timer timer;
+
     public float verticalSpacing = 100f;
-    public float choiceTimer = 5f;
+    public float choiceTimerTotal = 5f;
+    private float choiceTimer;
 
     // Start is called before the first frame update
     void Start()
     {
+        choiceTimer = choiceTimerTotal;
         if (trigger == null)
         {
             Debug.Log("No dialogue trigger associated with this tutorial.");
@@ -79,6 +83,7 @@ public class ChoicePrompt : MonoBehaviour
         }
 
         StartCoroutine(choicesTimer());
+        timer.SetVisible(true);
     }
 
     IEnumerator choicesTimer()
@@ -86,6 +91,7 @@ public class ChoicePrompt : MonoBehaviour
         while (choiceTimer > 0)
         {
             choiceTimer -= Time.deltaTime;
+            timer.SetFill(choiceTimerTotal, choiceTimer);
             yield return null;
         }
         foreach (Choice choice in choices)
@@ -100,6 +106,7 @@ public class ChoicePrompt : MonoBehaviour
             }
         }
         HideChoices();
+        timer.SetVisible(false);
     }
 
     public void UpdateAffection(int index)
