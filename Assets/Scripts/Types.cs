@@ -1,9 +1,11 @@
-namespace Types {
-    public enum Emotion {
+namespace Types
+{
+    public enum Emotion
+    {
         Default,
         Nervous,
         Happy,
         Angry,
-        Disgust 
+        Disgust
     }
-} 
+}
