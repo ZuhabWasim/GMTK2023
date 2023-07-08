@@ -316,6 +316,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7346695875112425541, guid: 416849437e01f75488ae2aca4b4f6aeb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 248.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346695875112425541, guid: 416849437e01f75488ae2aca4b4f6aeb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.1671
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346695875112425541, guid: 416849437e01f75488ae2aca4b4f6aeb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 121.66449
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346695875112425595, guid: 416849437e01f75488ae2aca4b4f6aeb, type: 3}
+      propertyPath: m_margin.z
+      value: 1.3226929
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416849437e01f75488ae2aca4b4f6aeb, type: 3}
 --- !u!224 &1537607012257683294 stripped
