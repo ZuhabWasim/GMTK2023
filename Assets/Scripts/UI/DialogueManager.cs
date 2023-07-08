@@ -44,7 +44,6 @@ public class DialogueManager : MonoBehaviour
         // Destroy any previous interrupted dialogue.
         if (currentTrigger != null)
             DestroyTrigger();
-        Debug.Log(trigger);
         currentTrigger = trigger;
 
         // Update dialogue box.

@@ -37,7 +37,6 @@ public class PersonAnimator : MonoBehaviour
     {
         foreach (CharacterSprite charSprite in sprites)
         {
-            Debug.Log(charSprite.emotion == emotion);
             if (charSprite.emotion == emotion)
                 ShowSprite(charSprite);
             else
