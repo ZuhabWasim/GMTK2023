@@ -25,6 +25,6 @@ public class DisdainTest : MonoBehaviour
         } else {
             _disdain.BeDamaged(-_changeAmount);
         }
-        _changeAmount = Random.Range(-10f, 10f);
+        _changeAmount = Random.Range(-10f, 20f);
     }
 }
