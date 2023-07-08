@@ -10,7 +10,7 @@ public class Person : MonoBehaviour
     public Emotion emotion;
 
     [SerializeField]
-    private PersonAnimator personAnimator;
+    public PersonAnimator personAnimator;
 
     void Start()
     {

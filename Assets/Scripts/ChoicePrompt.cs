@@ -27,13 +27,20 @@ public class ChoicePrompt : MonoBehaviour
 
     public GameObject choiceTemplate;
 
+    public DialogueTrigger trigger;
+
     public float verticalSpacing = 100f;
     public float choiceTimer = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        ShowChoices();
+        if (trigger == null)
+        {
+            Debug.Log("No dialogue trigger associated with this tutorial.");
+            return;
+        }
+        trigger.DialogueFinished += ShowChoices;
     }
 
     public void ShowChoices()
@@ -105,5 +112,10 @@ public class ChoicePrompt : MonoBehaviour
     public void HideChoices()
     {
         this.gameObject.SetActive(false);
+    }
+
+    void OnDestroy()
+    {
+        trigger.DialogueFinished -= ShowChoices;
     }
 }
