@@ -16,6 +16,9 @@ public class Choice
 
     [SerializeField]
     public DialogueTrigger dialogue;
+
+    [SerializeField]
+    public bool isDefaultChoice = false;
 }
 
 public class ChoicePrompt : MonoBehaviour
@@ -25,6 +28,7 @@ public class ChoicePrompt : MonoBehaviour
     public GameObject choiceTemplate;
 
     public float verticalSpacing = 100f;
+    public float choiceTimer = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -61,11 +65,34 @@ public class ChoicePrompt : MonoBehaviour
             button.onClick.RemoveAllListeners();
 
             UnityEventTools.AddPersistentListener(button.onClick, choice.dialogue.TriggerDialogue);
-            UnityEventTools.AddPersistentListener(button.onClick, HideChoices);
             UnityEventTools.AddIntPersistentListener(button.onClick, UpdateAffection, i);
+            UnityEventTools.AddPersistentListener(button.onClick, HideChoices);
 
             i += 1;
         }
+
+        StartCoroutine(choicesTimer());
+    }
+
+    IEnumerator choicesTimer()
+    {
+        while (choiceTimer > 0)
+        {
+            choiceTimer -= Time.deltaTime;
+            yield return null;
+        }
+        foreach (Choice choice in choices)
+        {
+            if (choice.isDefaultChoice)
+            {
+                choice.dialogue.TriggerDialogue();
+                Protaganist pro = FindObjectOfType<Protaganist>();
+                if (pro)
+                    pro.AddAffection(choice.affectionScore);
+                break;
+            }
+        }
+        HideChoices();
     }
 
     public void UpdateAffection(int index)

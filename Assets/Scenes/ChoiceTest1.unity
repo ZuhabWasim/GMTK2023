@@ -392,23 +392,10 @@ MonoBehaviour:
   - choiceText: Do thus
     affectionScore: 23
     dialogue: {fileID: 1863640458}
+    isDefaultChoice: 0
   choiceTemplate: {fileID: 1125959484}
-  choiceObjects: []
   verticalSpacing: 20
-  choice1Text: 
-  choice2Text: 
-  choice3Text: 
-  choice1: {fileID: 617010087}
-  choice2: {fileID: 650143820}
-  choice3: {fileID: 904739637}
-  char1: {fileID: 841405689}
-  char2: {fileID: 1727396673}
-  char1Anchors:
-  - {fileID: 770246686}
-  - {fileID: 1374834801}
-  char2Anchors:
-  - {fileID: 1188552231}
-  - {fileID: 1818484345}
+  choiceTimer: 5
 --- !u!1 &421170825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,26 +2208,14 @@ MonoBehaviour:
   - choiceText: Do thus
     affectionScore: 23
     dialogue: {fileID: 1863640458}
+    isDefaultChoice: 0
   - choiceText: do that
     affectionScore: 23
     dialogue: {fileID: 1863640458}
+    isDefaultChoice: 1
   choiceTemplate: {fileID: 1113685862}
-  choiceObjects: []
   verticalSpacing: 100
-  choice1Text: 
-  choice2Text: 
-  choice3Text: 
-  choice1: {fileID: 0}
-  choice2: {fileID: 0}
-  choice3: {fileID: 0}
-  char1: {fileID: 841405689}
-  char2: {fileID: 1727396673}
-  char1Anchors:
-  - {fileID: 770246686}
-  - {fileID: 1374834801}
-  char2Anchors:
-  - {fileID: 1188552231}
-  - {fileID: 1818484345}
+  choiceTimer: 5
 --- !u!222 &1332543922
 CanvasRenderer:
   m_ObjectHideFlags: 0
