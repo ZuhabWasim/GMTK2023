@@ -19,6 +19,7 @@ public class Choice
 
     [SerializeField]
     public bool isDefaultChoice = false;
+
 }
 
 public class ChoicePrompt : MonoBehaviour
@@ -29,6 +30,9 @@ public class ChoicePrompt : MonoBehaviour
 
     public float verticalSpacing = 100f;
     public float choiceTimer = 5f;
+
+    [SerializeField] private Disdain _disdain;
+
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +104,9 @@ public class ChoicePrompt : MonoBehaviour
         Protaganist pro = FindObjectOfType<Protaganist>();
         if (pro)
             pro.AddAffection(choices[index].affectionScore);
+            
+            //TODO: remove this once we add characters just want to test it for now
+        _disdain.UpdateDisdain(-choices[index].affectionScore);
     }
 
     public void HideChoices()

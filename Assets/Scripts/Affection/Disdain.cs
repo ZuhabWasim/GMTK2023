@@ -79,4 +79,13 @@ public class Disdain : MonoBehaviour, IDamageable
     {
         health = maxHealth;
     }
+
+    public void UpdateDisdain(float _changeAmount)
+    {
+        if (_changeAmount >= 0f){
+            this.Heal(_changeAmount);
+        } else {
+            this.BeDamaged(-_changeAmount);
+        }    
+    }
 }
