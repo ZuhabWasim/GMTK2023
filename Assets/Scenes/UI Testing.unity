@@ -600,6 +600,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1840530805}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.hangTime
       value: 1
       objectReference: {fileID: 0}
@@ -613,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].text
-      value: "\u201CFor sure! But don\u2019\u2019t try anything crazy alright?\u201D\r\n"
+      value: "\u201CFor sure! But don't try anything crazy alright?\u201D\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1].name
@@ -1096,6 +1100,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2044608111}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.person
+      value: 
+      objectReference: {fileID: 1157851613}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].name
       value: 
       objectReference: {fileID: 0}
@@ -1188,6 +1196,10 @@ PrefabInstance:
       propertyPath: dialogue.person
       value: 
       objectReference: {fileID: 1157851613}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 4
@@ -2528,6 +2540,10 @@ PrefabInstance:
       propertyPath: dialogue.person
       value: 
       objectReference: {fileID: 1637946168}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
@@ -5579,6 +5595,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1637946168}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -6873,6 +6893,10 @@ PrefabInstance:
       propertyPath: dialogue.person
       value: 
       objectReference: {fileID: 1840530805}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.hangTime
       value: 0
@@ -8507,6 +8531,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1840530805}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9161,6 +9189,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1840530805}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.hangTime
       value: 1
       objectReference: {fileID: 0}
@@ -9652,6 +9684,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1157851613}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -9963,7 +9999,7 @@ PrefabInstance:
       objectReference: {fileID: 1637946168}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.emotion
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -12575,6 +12611,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1637946168}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -14219,6 +14259,10 @@ PrefabInstance:
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.person
       value: 
+      objectReference: {fileID: 1157851613}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -14230,7 +14274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].text
-      value: "(Isabella lets out a small giggle\r)"
+      value: "*giggle\rs*"
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1].name
@@ -14911,7 +14955,7 @@ PrefabInstance:
       objectReference: {fileID: 1637946168}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.emotion
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.hangTime
@@ -15307,6 +15351,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1840530805}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -15599,14 +15647,18 @@ PrefabInstance:
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.person
       value: 
-      objectReference: {fileID: 1637946168}
+      objectReference: {fileID: 1840530805}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].name
-      value: Mathew
+      value: Noah
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].text
@@ -15615,7 +15667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1].name
-      value: Mathew
+      value: Noah
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1].text
@@ -16264,6 +16316,10 @@ PrefabInstance:
       propertyPath: dialogue.person
       value: 
       objectReference: {fileID: 1637946168}
+    - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+      propertyPath: dialogue.emotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 4
