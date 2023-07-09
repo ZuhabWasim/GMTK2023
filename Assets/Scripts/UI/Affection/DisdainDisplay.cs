@@ -18,6 +18,8 @@ public class DisdainDisplay : MonoBehaviour
     [SerializeField] private float speedOfChange = 1f;
     [SerializeField] private float exponentialModifier = 1f;
 
+    [SerializeField] private LevelLoader _levelLoader;
+
     public Color targetColor;
     public Image FillImage;
 
@@ -27,6 +29,9 @@ public class DisdainDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Disable crossfade canvas
+        _levelLoader.DisableCrossfadeCanvas();
+
         if (_disdain){
             _disdain.HealthChanged += OnHealthChange;
             _disdain.Death += OnDeath;
@@ -35,6 +40,8 @@ public class DisdainDisplay : MonoBehaviour
             _display.maxValue = _disdain.maxHealth;
         }
         _curHealthPercent = _disdain.health / _disdain.maxHealth;
+
+        _levelLoader = FindObjectOfType<LevelLoader>();
     }
 
     void Update(){
@@ -68,5 +75,8 @@ public class DisdainDisplay : MonoBehaviour
     }
 
     void OnDeath(){
+        //Enable crossfade canvas
+        _levelLoader.EnableCrossfadeCanvas();
+        _levelLoader.OnGameOver();
     }
 }
