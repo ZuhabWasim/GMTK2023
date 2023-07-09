@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Events;
 using System;
 
 [System.Serializable]
@@ -79,13 +78,12 @@ public class ChoicePrompt : MonoBehaviour
             Button button = newChoice.GetComponent<Button>();
             button.onClick.RemoveAllListeners();
 
+            int tempChoiceIndex = i;
             if (choice.dialogue != null)
-                UnityEventTools.AddPersistentListener(
-                    button.onClick,
-                    choice.dialogue.TriggerDialogue
-                );
-            UnityEventTools.AddIntPersistentListener(button.onClick, UpdateAffection, i);
-            UnityEventTools.AddPersistentListener(button.onClick, HideChoices);
+                button.onClick.AddListener(delegate { choice.dialogue.TriggerDialogue(); });
+            button.onClick.AddListener(delegate { UpdateAffection(tempChoiceIndex); });
+            button.onClick.AddListener(delegate { HideChoices(); });
+
 
             i += 1;
         }
@@ -123,6 +121,7 @@ public class ChoicePrompt : MonoBehaviour
         if (pro)
             pro.AddAffection(choices[index].affectionScore);
 
+        Debug.Log(index);
         //TODO: remove this once we add characters just want to test it for now
         _disdain.UpdateDisdain(-choices[index].affectionScore);
     }
