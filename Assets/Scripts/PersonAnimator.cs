@@ -14,6 +14,16 @@ public class CharacterSprite
     public Image sprite;
 }
 
+[System.Serializable]
+public class AccentSprite
+{
+    [SerializeField]
+    public Emotion emotion;
+
+    [SerializeField]
+    public Image sprite;
+}
+
 public class PersonAnimator : MonoBehaviour
 {
     public Person person;
@@ -25,11 +35,18 @@ public class PersonAnimator : MonoBehaviour
     [SerializeField]
     private List<CharacterSprite> sprites;
 
+    [SerializeField]
+    private List<AccentSprite> accentSprites;
+
     void Start()
     {
         foreach (CharacterSprite charSprite in sprites)
         {
             HideSprite(charSprite);
+        }
+        foreach (AccentSprite accentSprite in accentSprites)
+        {
+            HideSprite(accentSprite);
         }
     }
 
@@ -42,6 +59,13 @@ public class PersonAnimator : MonoBehaviour
             else
                 HideSprite(charSprite);
         }
+        foreach (AccentSprite accentSprite in accentSprites)
+        {
+            if (accentSprite.emotion == emotion)
+                ShowSprite(accentSprite);
+            else
+                HideSprite(accentSprite);
+        }
     }
 
     public void HideSprite(CharacterSprite charSprite)
@@ -49,8 +73,18 @@ public class PersonAnimator : MonoBehaviour
         charSprite.sprite.enabled = false;
     }
 
+    public void HideSprite(AccentSprite accentSprite)
+    {
+        accentSprite.sprite.enabled = false;
+    }
+
     public void ShowSprite(CharacterSprite charSprite)
     {
         charSprite.sprite.enabled = true;
+    }
+
+    public void ShowSprite(AccentSprite accentSprite)
+    {
+        accentSprite.sprite.enabled = true;
     }
 }

@@ -88,4 +88,8 @@ public class Disdain : MonoBehaviour, IDamageable
             this.BeDamaged(-_changeAmount);
         }    
     }
+
+    public bool CheckDeath(){
+        return health/ maxHealth < 0.5f;
+    }
 }
