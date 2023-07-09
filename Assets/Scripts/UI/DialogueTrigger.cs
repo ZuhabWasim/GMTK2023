@@ -39,10 +39,11 @@ public class DialogueTrigger : MonoBehaviour
             _levelLoader.EnableCrossfadeCanvas();
             if (FindObjectOfType<Disdain>().CheckDeath())
             {
-                _levelLoader.OnGameOver();            }
+                _levelLoader.OnGameLose();            
+            }
             else
             {
-                _levelLoader.MainMenu();
+                _levelLoader.OnGameWin();
             }
 
         }
