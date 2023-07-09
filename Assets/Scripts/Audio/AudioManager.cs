@@ -29,8 +29,10 @@ public class AudioManager : MonoBehaviour
     }
 
     void Start() {
-        Play("burger_king");
-        // Play("piano_track");
+        // Play("burger_king");
+        Play("piano_track");
+        // Play("saxophone_track");
+        // Play("piano_psovod");
     }
 
     // If you want to play audio statically:
