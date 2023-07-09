@@ -26,10 +26,15 @@ public class LevelLoader : MonoBehaviour
         LoadLevel(1);
     }
 
+    public void MainMenu()
+    {
+        LoadLevel(0);
+    }
+
     public void OnGameOver()
     {
         Debug.Log("game ending caught");
-        LoadLevel(0);
+        SceneManager.LoadScene(2);
     }
 
     public void EndGame()
@@ -45,5 +50,13 @@ public class LevelLoader : MonoBehaviour
                 .EditorApplication
                 .isPlaying = false; // Stop playing the scene
         #endif
+    }
+
+    public void DisableCrossfadeCanvas(){
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+        public void EnableCrossfadeCanvas(){
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
 }
