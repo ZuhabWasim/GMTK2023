@@ -18,7 +18,7 @@ public class PersonAnimator : MonoBehaviour
 {
     public Person person;
 
-    public Vector3 dialoguePosition;
+    public GameObject dialoguePosition;
 
     public AudioClip dialogueSound;
 
