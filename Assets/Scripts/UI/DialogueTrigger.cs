@@ -33,7 +33,19 @@ public class DialogueTrigger : MonoBehaviour
 
         if (dialogue.type == DialogueType.Ending)
         {
-            // TODO
+            LevelLoader _levelLoader;
+            _levelLoader = FindObjectOfType<LevelLoader>();
+            //Enable crossfade canvas
+            _levelLoader.EnableCrossfadeCanvas();
+            if (FindObjectOfType<Disdain>().CheckDeath())
+            {
+                _levelLoader.OnGameLose();            
+            }
+            else
+            {
+                _levelLoader.OnGameWin();
+            }
+
         }
     }
 

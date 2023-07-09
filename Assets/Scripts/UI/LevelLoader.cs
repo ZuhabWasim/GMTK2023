@@ -31,10 +31,16 @@ public class LevelLoader : MonoBehaviour
         LoadLevel(0);
     }
 
-    public void OnGameOver()
+    public void OnGameLose()
     {
         Debug.Log("game ending caught");
         SceneManager.LoadScene(2);
+    }
+
+    public void OnGameWin()
+    {
+        Debug.Log("game win caught");
+        SceneManager.LoadScene(3);
     }
 
     public void EndGame()
