@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor.Events;
+using System;
 
 [System.Serializable]
 public class Choice
@@ -134,6 +135,10 @@ public class ChoicePrompt : MonoBehaviour
 
     void OnDestroy()
     {
-        trigger.DialogueFinished -= ShowChoices;
+        try
+        {
+            trigger.DialogueFinished -= ShowChoices;
+        }
+        catch (NullReferenceException) { }
     }
 }
