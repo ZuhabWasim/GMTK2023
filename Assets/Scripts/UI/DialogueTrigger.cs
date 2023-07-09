@@ -17,6 +17,12 @@ public class DialogueTrigger : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(LateStart(0.5f));
+    }
+
+    IEnumerator LateStart(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
         if (dialogue.type == DialogueType.Starting)
             TriggerDialogue();
     }
@@ -43,7 +49,7 @@ public class DialogueTrigger : MonoBehaviour
             if (nextDialogue)
                 nextDialogue.TriggerDialogue();
         }
-        catch (System.NullReferenceException ex)
+        catch (System.NullReferenceException)
         {
             return;
             //Debug.Log("Caught referencing next Dialogue on game exit.");

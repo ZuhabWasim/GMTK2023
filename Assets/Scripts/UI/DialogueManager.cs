@@ -53,10 +53,12 @@ public class DialogueManager : MonoBehaviour
         if (dialogue.person)
         {
             PersonEmote?.Invoke(dialogue.person, dialogue.emotion);
-            animator.gameObject.transform.parent.transform.localPosition = dialogue
+            animator.gameObject.transform.parent.transform.position = dialogue
                 .person
                 .personAnimator
-                .dialoguePosition;
+                .dialoguePosition
+                .transform
+                .position;
         }
         else
             animator.gameObject.transform.parent.transform.position = dialogue.position;

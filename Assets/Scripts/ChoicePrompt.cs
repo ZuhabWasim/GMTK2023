@@ -19,7 +19,6 @@ public class Choice
 
     [SerializeField]
     public bool isDefaultChoice = false;
-
 }
 
 public class ChoicePrompt : MonoBehaviour
@@ -36,8 +35,8 @@ public class ChoicePrompt : MonoBehaviour
     public float choiceTimerTotal = 5f;
     private float choiceTimer;
 
-    [SerializeField] private Disdain _disdain;
-
+    [SerializeField]
+    private Disdain _disdain;
 
     // Start is called before the first frame update
     void Start()
@@ -79,7 +78,11 @@ public class ChoicePrompt : MonoBehaviour
             Button button = newChoice.GetComponent<Button>();
             button.onClick.RemoveAllListeners();
 
-            UnityEventTools.AddPersistentListener(button.onClick, choice.dialogue.TriggerDialogue);
+            if (choice.dialogue != null)
+                UnityEventTools.AddPersistentListener(
+                    button.onClick,
+                    choice.dialogue.TriggerDialogue
+                );
             UnityEventTools.AddIntPersistentListener(button.onClick, UpdateAffection, i);
             UnityEventTools.AddPersistentListener(button.onClick, HideChoices);
 
@@ -118,8 +121,8 @@ public class ChoicePrompt : MonoBehaviour
         Protaganist pro = FindObjectOfType<Protaganist>();
         if (pro)
             pro.AddAffection(choices[index].affectionScore);
-            
-            //TODO: remove this once we add characters just want to test it for now
+
+        //TODO: remove this once we add characters just want to test it for now
         _disdain.UpdateDisdain(-choices[index].affectionScore);
     }
 
