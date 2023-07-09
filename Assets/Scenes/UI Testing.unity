@@ -989,26 +989,26 @@ PrefabInstance:
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.person
       value: 
-      objectReference: {fileID: 1637946168}
+      objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].name
-      value: Mathew
+      value: THATS THE END OF THE DEMO
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[0].text
-      value: Why did I think that was a good idea?
+      value: THANK YOU FOR PLAYING :DDDDD
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1].name
-      value: Mathew
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1].text
-      value: "What do I do? What do I do? Everyone\u2019s looking at me! "
+      value: THATS THE END OF THE DEMO
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.sentences.Array.data[2].name
@@ -2402,7 +2402,7 @@ PrefabInstance:
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: trigger
       value: 
-      objectReference: {fileID: 8992837238971602222}
+      objectReference: {fileID: 1374050628}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: _disdain
       value: 
@@ -2414,11 +2414,15 @@ PrefabInstance:
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 5344034413679394252}
+      objectReference: {fileID: 1682235557}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].dialogue
       value: 
-      objectReference: {fileID: 1582036340}
+      objectReference: {fileID: 2045581514}
+    - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
+      propertyPath: choices.Array.data[2].dialogue
+      value: 
+      objectReference: {fileID: 2037953380}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].choiceText
       value: Run down the stairs
@@ -2433,15 +2437,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].affectionScore
-      value: -25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].affectionScore
-      value: 25
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].isDefaultChoice
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].isDefaultChoice
@@ -2453,7 +2457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857883, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: m_Name
-      value: Event1A
+      value: Event1A Throw
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186515128146, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: m_IsActive
@@ -3754,7 +3758,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2046796337508322296, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: m_Name
-      value: Dialogue (4)
+      value: ScreamingDidntWork
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: dialogue.person
@@ -4780,7 +4784,7 @@ PrefabInstance:
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: trigger
       value: 
-      objectReference: {fileID: 8992837238971602222}
+      objectReference: {fileID: 1149290512}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: _disdain
       value: 
@@ -4792,34 +4796,38 @@ PrefabInstance:
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 5344034413679394252}
+      objectReference: {fileID: 1236487722}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].dialogue
       value: 
-      objectReference: {fileID: 1582036340}
+      objectReference: {fileID: 1881550382}
+    - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
+      propertyPath: choices.Array.data[2].dialogue
+      value: 
+      objectReference: {fileID: 1154246378}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].choiceText
-      value: Run down the stairs
+      value: Introduce yourself and Noah
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].choiceText
-      value: 'You scream '
+      value: Wait for Noah to speak
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[2].choiceText
-      value: Get the first aid kit
+      value: Stand Idly by
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].affectionScore
-      value: -25
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].affectionScore
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].isDefaultChoice
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].isDefaultChoice
@@ -4831,7 +4839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857883, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: m_Name
-      value: Event1B
+      value: Event1B Run
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186515128146, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: m_IsActive
@@ -6117,6 +6125,17 @@ Transform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 869626693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &869824797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 575729059}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -7719,7 +7738,7 @@ PrefabInstance:
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: trigger
       value: 
-      objectReference: {fileID: 8992837238971602222}
+      objectReference: {fileID: 511443225}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: _disdain
       value: 
@@ -7731,34 +7750,38 @@ PrefabInstance:
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].dialogue
       value: 
-      objectReference: {fileID: 5344034413679394252}
+      objectReference: {fileID: 1679382103}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].dialogue
       value: 
-      objectReference: {fileID: 1582036340}
+      objectReference: {fileID: 869824797}
+    - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
+      propertyPath: choices.Array.data[2].dialogue
+      value: 
+      objectReference: {fileID: 1768268492}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].choiceText
-      value: Run down the stairs
+      value: You laugh and say hello
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].choiceText
-      value: 'You scream '
+      value: You look at Noah
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[2].choiceText
-      value: Get the first aid kit
+      value: Introduce Yourselves
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].affectionScore
-      value: -25
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].affectionScore
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[0].isDefaultChoice
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857861, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: choices.Array.data[1].isDefaultChoice
@@ -7770,7 +7793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186330857883, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: m_Name
-      value: Event1C
+      value: Event1C First Aid
       objectReference: {fileID: 0}
     - target: {fileID: 2802178186515128146, guid: ece2c45b7803ed44995b6e82ca87d3d4, type: 3}
       propertyPath: m_IsActive
@@ -7997,7 +8020,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2046796337508322296, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: m_Name
-      value: Dialogue5
+      value: NowWhat
       objectReference: {fileID: 0}
     - target: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
       propertyPath: nextDialogue
@@ -8193,6 +8216,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1154246378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 49523408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1157851610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8231,7 +8265,7 @@ PrefabInstance:
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: trigger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8992837238971602222}
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: _disdain
       value: 
@@ -8251,7 +8285,7 @@ PrefabInstance:
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: choices.Array.data[2].dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1542888874}
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: choices.Array.data[1].choiceText
       value: Stand in front of the staircase
@@ -8262,15 +8296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: choices.Array.data[0].affectionScore
-      value: -25
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: choices.Array.data[1].affectionScore
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: choices.Array.data[0].isDefaultChoice
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1654604886553860436, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
       propertyPath: choices.Array.data[1].isDefaultChoice
@@ -8780,6 +8814,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2046796337508322298, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 1236487720}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1236487722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 1236487720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1252316458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10958,6 +11003,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2046796337508322298, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 1542888872}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1542888874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 1542888872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1546088730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11928,6 +11984,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2046796337508322298, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 1679382101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679382103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 1679382101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1680433453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12030,6 +12097,17 @@ Transform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 1680433453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1682235557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 215770685}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12455,6 +12533,17 @@ Transform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 1762351431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1768268492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 1031880056}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13275,6 +13364,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2046796337508322298, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 1881550380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881550382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 1881550380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1888497031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14660,6 +14760,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2046796337508322298, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 2037953378}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2037953380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 2037953378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2041749094 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1313495180244121167, guid: 1a8e92fe6f89c574baad17fee1552eb9, type: 3}
@@ -14753,6 +14864,17 @@ Transform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
   m_PrefabInstance: {fileID: 2044608109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4366c7561811429e14245a4929d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2045581514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2046796337508322297, guid: 7c0fd9405209d2f4d863b7f0a4ff3d7f, type: 3}
+  m_PrefabInstance: {fileID: 1323270986}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

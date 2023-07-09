@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     {
         // image = GetComponentInChildren<Image>();
         // counter = GetComponentInChildren<TextMeshProUGUI>();
-        SetFill(1f, 1f);
+        //SetFill(1f, 1f);
         SetVisible(false);
     }
 
