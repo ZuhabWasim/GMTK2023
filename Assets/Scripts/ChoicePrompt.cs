@@ -19,7 +19,6 @@ public class Choice
 
     [SerializeField]
     public bool isDefaultChoice = false;
-
 }
 
 public class ChoicePrompt : MonoBehaviour
@@ -28,16 +27,27 @@ public class ChoicePrompt : MonoBehaviour
 
     public GameObject choiceTemplate;
 
+    public DialogueTrigger trigger;
+
+    public Timer timer;
+
     public float verticalSpacing = 100f;
-    public float choiceTimer = 5f;
+    public float choiceTimerTotal = 5f;
+    private float choiceTimer;
 
-    [SerializeField] private Disdain _disdain;
-
+    [SerializeField]
+    private Disdain _disdain;
 
     // Start is called before the first frame update
     void Start()
     {
-        ShowChoices();
+        choiceTimer = choiceTimerTotal;
+        if (trigger == null)
+        {
+            Debug.Log("No dialogue trigger associated with this tutorial.");
+            return;
+        }
+        trigger.DialogueFinished += ShowChoices;
     }
 
     public void ShowChoices()
@@ -68,7 +78,11 @@ public class ChoicePrompt : MonoBehaviour
             Button button = newChoice.GetComponent<Button>();
             button.onClick.RemoveAllListeners();
 
-            UnityEventTools.AddPersistentListener(button.onClick, choice.dialogue.TriggerDialogue);
+            if (choice.dialogue != null)
+                UnityEventTools.AddPersistentListener(
+                    button.onClick,
+                    choice.dialogue.TriggerDialogue
+                );
             UnityEventTools.AddIntPersistentListener(button.onClick, UpdateAffection, i);
             UnityEventTools.AddPersistentListener(button.onClick, HideChoices);
 
@@ -76,6 +90,7 @@ public class ChoicePrompt : MonoBehaviour
         }
 
         StartCoroutine(choicesTimer());
+        timer.SetVisible(true);
     }
 
     IEnumerator choicesTimer()
@@ -83,6 +98,7 @@ public class ChoicePrompt : MonoBehaviour
         while (choiceTimer > 0)
         {
             choiceTimer -= Time.deltaTime;
+            timer.SetFill(choiceTimerTotal, choiceTimer);
             yield return null;
         }
         foreach (Choice choice in choices)
@@ -97,6 +113,7 @@ public class ChoicePrompt : MonoBehaviour
             }
         }
         HideChoices();
+        timer.SetVisible(false);
     }
 
     public void UpdateAffection(int index)
@@ -104,13 +121,19 @@ public class ChoicePrompt : MonoBehaviour
         Protaganist pro = FindObjectOfType<Protaganist>();
         if (pro)
             pro.AddAffection(choices[index].affectionScore);
-            
-            //TODO: remove this once we add characters just want to test it for now
+
+        //TODO: remove this once we add characters just want to test it for now
         _disdain.UpdateDisdain(-choices[index].affectionScore);
     }
 
     public void HideChoices()
     {
         this.gameObject.SetActive(false);
+        timer.SetVisible(false);
+    }
+
+    void OnDestroy()
+    {
+        trigger.DialogueFinished -= ShowChoices;
     }
 }

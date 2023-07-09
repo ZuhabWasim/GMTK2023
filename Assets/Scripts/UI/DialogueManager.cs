@@ -43,16 +43,25 @@ public class DialogueManager : MonoBehaviour
     {
         // Destroy any previous interrupted dialogue.
         if (currentTrigger != null)
-            DestroyTrigger();
+            DestroyTrigger(0f);
         currentTrigger = trigger;
 
         // Update dialogue box.
         animator.SetBool("IsOpen", true);
-        animator.gameObject.transform.parent.transform.position = dialogue.position;
 
         // Invoke event.
         if (dialogue.person)
+        {
             PersonEmote?.Invoke(dialogue.person, dialogue.emotion);
+            animator.gameObject.transform.parent.transform.position = dialogue
+                .person
+                .personAnimator
+                .dialoguePosition
+                .transform
+                .position;
+        }
+        else
+            animator.gameObject.transform.parent.transform.position = dialogue.position;
 
         // Build the sentences to be displayed.
         sentences = new Queue<Sentence>();
@@ -116,16 +125,17 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue(Dialogue dialogue)
     {
-        StartCoroutine(DestroyTrigger());
+        StartCoroutine(DestroyTrigger(dialogue.hangTime));
 
         if (dialogue.type == DialogueType.Ending)
             GameOver?.Invoke();
     }
 
-    IEnumerator DestroyTrigger()
+    IEnumerator DestroyTrigger(float hangTime)
     {
         animator.SetBool("IsOpen", false);
         yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(hangTime);
         currentTrigger.TriggerDialogueFinish();
         DialogueTrigger tempTrigger = currentTrigger;
         currentTrigger = null;

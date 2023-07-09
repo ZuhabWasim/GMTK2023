@@ -2,10 +2,11 @@ namespace Types
 {
     public enum Emotion
     {
-        Default,
+        Neutral,
         Nervous,
         Happy,
         Angry,
-        Disgust
+        Disgust,
+        Hidden
     }
 }
