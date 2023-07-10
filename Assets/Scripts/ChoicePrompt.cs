@@ -80,10 +80,24 @@ public class ChoicePrompt : MonoBehaviour
 
             int tempChoiceIndex = i;
             if (choice.dialogue != null)
-                button.onClick.AddListener(delegate { choice.dialogue.TriggerDialogue(); });
-            button.onClick.AddListener(delegate { UpdateAffection(tempChoiceIndex); });
-            button.onClick.AddListener(delegate { HideChoices(); });
-
+                button.onClick.AddListener(
+                    delegate
+                    {
+                        choice.dialogue.TriggerDialogue();
+                    }
+                );
+            button.onClick.AddListener(
+                delegate
+                {
+                    UpdateAffection(tempChoiceIndex);
+                }
+            );
+            button.onClick.AddListener(
+                delegate
+                {
+                    HideChoices();
+                }
+            );
 
             i += 1;
         }
